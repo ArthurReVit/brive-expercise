@@ -1,4 +1,8 @@
-0.2.0-beta
+0.2.1-beta
+
+- Fixed missing dependencies and a single warning.
+
+  0.2.0-beta
 
 FRONT-END
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 // Load common components
 
@@ -72,6 +72,8 @@ const EmployeesFeed = (props) => {
 							onEditClick={(e) => onOpenPopUp(e)}
 						/>
 					);
+				} else {
+					return null;
 				}
 			});
 		}
