@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const { check, validationResult } = require('express-validator/check');
-const auth = require('../../middleware/auth');
 
 const Worker = require('../../models/Worker');
 
@@ -12,7 +11,6 @@ const Worker = require('../../models/Worker');
 router.post(
 	'/',
 	[
-		auth,
 		check('company', 'Ingrese la empresa del empleado.').not().isEmpty(),
 		check('employee', 'Ingrese el nombre del empleado.').not().isEmpty(),
 		check('position', 'Ingrese el puesto del empleado.').not().isEmpty(),
@@ -50,7 +48,7 @@ router.post(
 // @desc    Get all workers
 // @access  Private
 
-router.get('/', auth, async (req, res) => {
+router.get('/', async (req, res) => {
 	try {
 		let workers = await Worker.find();
 
@@ -69,11 +67,9 @@ router.get('/', auth, async (req, res) => {
 router.put(
 	'/:id',
 	[
-		auth,
-		check('company', 'Ingrese la empresa del empleado.').not().isEmpty(),
 		check('employee', 'Ingrese el nombre del empleado.').not().isEmpty(),
 		check('position', 'Ingrese el puesto del empleado.').not().isEmpty(),
-		check('company', 'Ingrese el salario del empleado.').not().isEmpty(),
+		check('salary', 'Ingrese el salario del empleado.').not().isEmpty(),
 	],
 	async (req, res) => {
 		const errors = validationResult(req);
@@ -82,11 +78,10 @@ router.put(
 			return res.status(400).json({ errors: errors.array() });
 		}
 
-		const { company, employee, position, salary } = req.body;
+		const { employee, position, salary } = req.body;
 
 		try {
 			const updatedWorker = {
-				company,
 				employee,
 				position,
 				salary,
@@ -107,7 +102,7 @@ router.put(
 	}
 );
 
-router.delete('/:id', auth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
 	try {
 		await Worker.findByIdAndDelete(req.params.id);
 

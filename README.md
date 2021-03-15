@@ -1,4 +1,12 @@
-0.1.0-beta
+0.2.0-beta
+
+FRONT-END
+
+- Created textfield, button and table common components.
+- Setted up employees feed, components.
+- Currency and text formatter functions added.
+
+  0.1.0-beta
 
 BACK-END
 

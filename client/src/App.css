@@ -1,0 +1,207 @@
+* {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* Navbar styles */
+
+header {
+	align-items: center;
+	box-sizing: border-box;
+	background: #e5e5e5;
+	border-bottom: 1px solid #808080;
+	display: flex;
+	height: 10vh;
+	justify-content: space-evenly;
+	padding: 3vh 4vw;
+	width: 100%;
+}
+
+.registered-employees {
+	font-size: 2vh;
+	font-weight: bold;
+}
+
+/* Container styles */
+
+.main-content {
+	align-items: center;
+	background: #f5f5f5;
+	display: flex;
+	flex-direction: column;
+	height: 80vh;
+	justify-content: center;
+}
+
+/* Table styles */
+
+.table-group {
+	margin: 3vh 0;
+	width: 60vw;
+}
+
+.table-heading-element {
+	font-size: 1.8vh;
+	padding: 1vh 1vw;
+}
+
+.table-row-gray {
+	background: #e2e2e2;
+}
+
+.table-row-gray:hover {
+	background: #f5f5f5;
+}
+
+.table-row-blue {
+	background: #d0e8ff;
+}
+
+.table-row-blue:hover {
+	background: #f5f5f5;
+}
+
+.table-element {
+	font-size: 1.8vh;
+	padding: 1vh 1vw;
+}
+
+.salary-element {
+	font-family: 'Syne Mono', monospace;
+	text-align: end;
+}
+
+.salary-green {
+	color: #009926;
+}
+
+.salary-red {
+	color: #aa0000;
+}
+
+.options-element {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+/* Button styles */
+
+.table-button {
+	background-image: url(https://cdn0.iconfinder.com/data/icons/glyphpack/45/edit-alt-512.png);
+	background-size: cover;
+	cursor: pointer;
+	height: 2vh;
+	width: 2vh;
+}
+
+.common-button {
+	background: none;
+	cursor: pointer;
+	font-size: 1.8vh;
+	font-weight: bold;
+	letter-spacing: 1px;
+	outline: none;
+	padding: 1vh;
+}
+
+.button-green {
+	border: 2px solid #009926;
+	color: #009926;
+}
+
+.button-green:hover {
+	background: #009926;
+	border: 2px solid #009926;
+	color: #fff;
+	transition: ease-in-out 0.2s;
+}
+
+.button-green-active {
+	background: #009926;
+	border: 2px solid #009926;
+	color: #fff;
+	cursor: auto;
+}
+
+.button-red {
+	border: 2px solid #aa0000;
+	color: #aa0000;
+}
+
+.button-red:hover {
+	background: #aa0000;
+	border: 2px solid #aa0000;
+	color: #fff;
+	transition: ease-in-out 0.2s;
+}
+
+.add-employee-button {
+	margin-bottom: 2vh;
+	width: 100%;
+}
+
+/* Textfield styles */
+
+.search-bar-group {
+	width: 60vw;
+}
+
+.textfield {
+	box-sizing: border-box;
+	border: 1px solid #505050;
+	padding: 1vh 1vw;
+	width: 100%;
+}
+
+.add-employee-textfield {
+	display: inline-block;
+	margin-bottom: 2vh;
+	width: 100%;
+}
+
+/* Add/edit employee styles */
+
+.add-employee-bg {
+	align-items: center;
+	background: rgba(0, 0, 0, 0.8);
+	display: flex;
+	height: 80vh;
+	justify-content: center;
+	width: 100%;
+	position: absolute;
+}
+
+.add-employee-content {
+	box-sizing: border-box;
+	background: #e5e5e5;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 5vh 3vw;
+	width: 40vw;
+}
+
+.edit-employee-bg {
+	margin-left: -20vw;
+	margin-top: -62vh;
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/* Footer styles */
+
+footer {
+	align-items: center;
+	background: #e5e5e5;
+	display: flex;
+	height: 10vh;
+	justify-content: space-evenly;
+	width: 100%;
+}

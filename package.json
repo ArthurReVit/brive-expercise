@@ -1,11 +1,13 @@
 {
 	"name": "brive-exercise",
-	"version": "0.1.0-beta",
+	"version": "0.2.0-beta",
 	"description": "Practice por brivé soluciones",
 	"main": "server.js",
 	"scripts": {
 		"start": "node server",
-		"server": "nodemon server"
+		"server": "nodemon server",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
 	},
 	"author": "Arturo A. Reyes Vital",
 	"license": "MIT",
